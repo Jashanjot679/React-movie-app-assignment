@@ -26,11 +26,7 @@ class Card3 extends Component {
           />
         </div>
         <div className="content">
-
-            <h3  title={original_title}>
-              {original_title}
-            </h3>
-
+          <h3 title={original_title}>{original_title}</h3>
 
           <div>
             <span>Release date: {release_date} | </span>

@@ -1,26 +1,26 @@
 import React, { Component } from "react";
 
-class Card2 extends Component {
+class Card3_Tv extends Component {
   state = {
-    tvdata: this.props.tvdata,
+    searchdata: this.props.searchdata,
   };
 
   async componentDidMount() {}
 
   render() {
-    const { tvdata } = this.state;
+    const { searchdata } = this.state;
     const {
       popularity,
       overview,
       poster_path,
       original_name,
-      first_air_date,
-    } = tvdata;
+      release_date,
+    } = searchdata;
     return (
       <div className="cardstyle">
         <div className="image">
           <img
-            className="poster"
+            className="poster  "
             src={"https://image.tmdb.org/t/p/w220_and_h330_face/" + poster_path}
             alt={original_name}
           />
@@ -29,7 +29,7 @@ class Card2 extends Component {
           <h3 title={original_name}>{original_name}</h3>
 
           <div>
-            <span>Release date: {first_air_date} | </span>
+            <span>Release date: {release_date} | </span>
             <span>Popularity: {popularity}</span>
           </div>
 
@@ -39,4 +39,4 @@ class Card2 extends Component {
     );
   }
 }
-export default Card2;
+export default Card3_Tv;

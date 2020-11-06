@@ -51,7 +51,9 @@ class Search_Multi extends Component {
               );
             })}
 
-            {searchdata.length === 0 ? <p>No results found</p> : null}
+            {searchdata.length === 0 ? (
+              <h3 className="noResultLabel">Sorry, there are no results.</h3>
+            ) : null}
           </div>
         ) : (
           <Search_Default />

@@ -1,11 +1,10 @@
 import "./App.css";
 import React from "react";
 
-
 import {
   HashRouter as Router,
-  withRouter,
   Switch,
+  withRouter,
   Route,
 } from "react-router-dom";
 import Paper from "@material-ui/core/Paper";

@@ -5,7 +5,7 @@ class Search_Movie extends Component {
   render() {
     return (
       <div className="def">
-        <h2>Please initiate a search...</h2>
+        <h3>Please initiate a search.</h3>
       </div>
     );
   }

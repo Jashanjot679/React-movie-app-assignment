@@ -24,17 +24,15 @@ class SearchHeader extends Component {
     });
   }
 
+  async handleChange(e) {
+    await this.setState({ searchType: e.target.value });
+    this.doASearch();
+  }
   doASearch() {
     let searchType = this.state.searchType;
     let searchQuery = this.state.searchQuery;
     this.props.history.push("/search/" + searchType + "?query=" + searchQuery);
   }
-
-  async handleChange(e) {
-    await this.setState({ searchType: e.target.value });
-    this.doASearch();
-  }
-
   async onChange(e) {
     await this.setState({ searchQuery: e.target.value });
   }
@@ -61,6 +59,7 @@ class SearchHeader extends Component {
             onChange={this.onChange}
           />
           <label className="searchTypeLabel">Type</label>
+
           <select
             className="searchSelect"
             id="tv"
