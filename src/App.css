@@ -75,9 +75,7 @@
   font-size: small;
   border-style: none;
 }
-/* .searchArea select {
-  height: 40px;
-} */
+
 .cardstyle {
   border: 1px none rgb(163, 161, 161);
   box-shadow: 1px 1px 3px 1px #dad9d9;
@@ -111,7 +109,6 @@
   border: 1px solid grey;
   margin-left: 8px;
   margin-right: 8px;
-  /* background-color: aqua; */
 }
 .movieSelect,
 .tvSelect {
@@ -143,8 +140,11 @@
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.tabs ul {
+.MuiTabs-root {
   background-color: rgb(235, 235, 235);
+  box-shadow: 1px 1px 3px 1px #dad9d9;
+}
+.MuiTabs-flexContainer {
   height: 40px;
   display: flex;
   justify-content: center;
@@ -152,14 +152,8 @@
   margin: 0;
   padding: 20px;
   padding-left: 0px;
-  box-shadow: 1px 1px 3px 1px #dad9d9;
 }
-.tabs ul li {
-  flex: 1;
-  list-style: none;
-  font-size: small;
-  color: #282c34;
-}
+
 .image {
   display: flex;
   justify-content: center;

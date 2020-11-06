@@ -12,15 +12,15 @@ class Movie_Upcoming extends Component {
   };
 
   async componentDidMount() {
-    let getMovies = await makeRequest("movie/upcoming");
-    this.setState({ moviedata: getMovies.results });
-    if (typeof getMovies !== "undefined") {
+    let getResults = await makeRequest("movie/upcoming");
+    this.setState({ moviedata: getResults.results });
+    if (typeof getResults !== "undefined") {
       this.setState({ loading: false });
     }
   }
 
   render() {
-    const { listType, moviedata, loading } = this.state;
+    const { moviedata, loading } = this.state;
     return (
       <div>
         <MovieHeader select={"upcoming"} />

@@ -1,10 +1,8 @@
 
-
-
 export async function makeRequest(path, query = null ) {
 
     let apiUrl = "https://api.themoviedb.org/3/";
-    let apiKey = process.env.REACT_APP_API_KEY;
+    let apiKey = "f7da4de8a35412f4ac9a13f1e835855a";
 
     if( query !== null ){
         apiUrl += path+"?api_key="+apiKey+"&query="+query;
@@ -31,50 +29,3 @@ export async function makeRequest(path, query = null ) {
 
     return result
 }
-
-// const API =
-//     {
-//         Movie : {
-//             now_playing : () => {
-//                 return makeRequest('/movie/now_playing')
-//             },
-//             popular: () => {
-//                 return makeRequest('/movie/popular')
-//             },
-//             top_rated : () => {
-//                 return makeRequest('/movie/top_rated')
-//             },
-//             upcoming : () => {
-//                 return makeRequest('/movie/upcoming')
-//             }
-//         },
-//         TV : {
-//             airing_today : () => {
-//                 return makeRequest('/tv/airing_today')
-//             },
-//             on_the_air: () => {
-//                 return makeRequest('/tv/on_the_air')
-//             },
-//             popular : () => {
-//                 return makeRequest('/tv/popular')
-//             },
-//             top_rated : () => {
-//                 return makeRequest('/tv/top_rated')
-//             }
-//         },
-//         Search : {
-//             movie : ( query ) => {
-//                 return makeRequest('/search/movie' , query )
-//             },
-//             multi : ( query ) => {
-//                 return makeRequest('/search/multi' , query )
-//             },
-//             tv : ( query ) => {
-//                 return makeRequest('/search/tv' , query )
-//             }
-//         }
-//
-//
-//     }
-
-// export default API

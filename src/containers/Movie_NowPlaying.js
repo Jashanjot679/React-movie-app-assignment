@@ -3,7 +3,6 @@ import { makeRequest } from "../service/api";
 import Card from "./Card";
 import MovieHeader from "./MovieHeader";
 import { withRouter } from "react-router-dom";
-import SearchHeader from "./SearchHeader";
 
 class Movie_NowPlaying extends Component {
   state = {
@@ -13,15 +12,15 @@ class Movie_NowPlaying extends Component {
   };
 
   async componentDidMount() {
-    let getMovies = await makeRequest("movie/now_playing");
-    this.setState({ moviedata: getMovies.results });
-    if (typeof getMovies !== "undefined") {
+    let getResults = await makeRequest("movie/now_playing");
+    this.setState({ moviedata: getResults.results });
+    if (typeof getResults !== "undefined") {
       this.setState({ loading: false });
     }
   }
 
   render() {
-    const { listType, moviedata, loading } = this.state;
+    const { moviedata, loading } = this.state;
     return (
       <div>
         <MovieHeader select={"now_playing"} />

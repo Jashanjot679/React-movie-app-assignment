@@ -5,7 +5,7 @@ class MovieHeader extends Component {
   constructor(props) {
     super(props);
     this.handleChange = this.handleChange.bind(this);
-    this.handleChange2 = this.handleChange2.bind(this);
+
     this.state = { redirect: null };
   }
 
@@ -14,25 +14,10 @@ class MovieHeader extends Component {
   }
 
   handleChange(event) {
-    console.log(event);
-    console.log(this.props.history);
     let value = event.target.value;
-    if (value === "now_playing") {
-      this.props.history.push("/");
-    } else {
-      this.props.history.push("/movie/" + value);
-    }
+    this.props.history.push("/movie/" + value);
   }
-  handleChange2(event) {
-    console.log(event);
-    console.log(this.props.history);
-    let value = event.target.value;
-    if (value === "airing_today") {
-      this.props.history.push("/");
-    } else {
-      this.props.history.push("/tv/" + value);
-    }
-  }
+
   render() {
     return (
       <div className="theHeader">

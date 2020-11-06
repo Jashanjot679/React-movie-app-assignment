@@ -26,12 +26,9 @@ class Card extends Component {
           />
         </div>
         <div className="content">
-          <h2>
-            <h3 href="" title={original_title}>
+            <h3  title={original_title}>
               {original_title}
             </h3>
-          </h2>
-
           <div>
             <span>Release date: {release_date} | </span>
             <span>Popularity: {popularity}</span>

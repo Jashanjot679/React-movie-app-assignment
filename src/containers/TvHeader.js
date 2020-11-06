@@ -12,19 +12,12 @@ class TvHeader extends Component {
   }
 
   handleChange(event) {
-    console.log(event);
-    console.log(this.props.history);
     let value = event.target.value;
-    if (value === "airing_today") {
-      this.props.history.push("/");
-    } else {
-      this.props.history.push("/tv/" + value);
-    }
+    this.props.history.push("/tv/" + value);
   }
   render() {
     return (
       <div className="theHeader">
-        {/* <MovieHeader /> */}
         <label className="TypeLabel">Type</label>
         <select
           id="tv"

@@ -8,42 +8,56 @@ import Search_Default from "./Search_Default";
 class Search_Movie extends Component {
   constructor(props) {
     super(props);
-
+    this.getQuery = this.getQuery.bind(this);
   }
+
   state = {
     listType: this.props.listType,
     searchdata: [],
-    searchTerm: "",
     loading: true,
-    query:this.props.query
+    query: this.props.searchQuery,
   };
 
   async componentDidMount() {
-    let getMovies = await makeRequest("search/movie", this.state.query);
-    console.log(getMovies);
-    this.setState({
-      searchdata: getMovies.results,
-    });
-    if (typeof getMovies !== "undefined") {
-      this.setState({ loading: false });
+    let query = await this.getQuery();
+
+    if (query) {
+      let getResults = await makeRequest("search/movie", query);
+
+      this.setState({
+        searchdata: getResults.results,
+      });
+      if (typeof getResults !== "undefined") {
+        this.setState({ loading: false });
+      }
     }
   }
 
+  getQuery() {
+    let search = "?" + window.location.href.split("?")[1];
+    let params = new URLSearchParams(search);
+    let query = params.has("query") ? params.get("query") : "";
+    return query;
+  }
+
   render() {
-    const { listType, searchdata, loading } = this.state;
+    const { searchdata, loading } = this.state;
+    let query =
+      this.props.searchQuery === "" && this.props.searchQuery === null;
     return (
       <div>
-        {/*<Search_Default/>*/}
-        {loading === false && typeof searchdata !== "undefined" ? (
+        {loading === false && typeof searchdata !== "undefined" && !query ? (
           <div className="row">
             {searchdata.map(function (value, index) {
               return (
                 <Card3 className={"col-md-3"} key={index} searchdata={value} />
               );
             })}
+
+            {searchdata.length === 0 ? <p>No results found</p> : null}
           </div>
         ) : (
-          <p>Loading</p>
+          <Search_Default />
         )}
       </div>
     );
