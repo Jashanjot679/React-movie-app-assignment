@@ -1,0 +1,173 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: white;
+  border: 4px solid #282c34;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #282c34;
+}
+
+.searchArea {
+  box-sizing: border-box;
+  padding: 10px;
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.searchArea input {
+  width: 350px;
+  font-size: small;
+}
+.searchArea select {
+  position: relative;
+  font-size: small;
+  width: 150px;
+  color: gray;
+}
+.searchArea .searchTypeLabel {
+  position: absolute;
+  margin-left: 160px;
+  padding: 2px;
+  margin-top: -35px;
+  z-index: 1;
+  font-size: x-small;
+  background-color: white;
+  color: grey;
+}
+.TypeLabel {
+  position: absolute;
+  margin-left: 15px;
+  padding: 2px;
+  z-index: 1;
+  font-size: x-small;
+  background-color: white;
+  color: grey;
+}
+
+.searchArea input,
+.searchArea select {
+  margin-right: 5px;
+  border: 1px solid rgb(172, 172, 172);
+  height: 40px;
+  border-radius: 4px;
+}
+.searchArea button {
+  background-color: rgb(54, 54, 190);
+  box-sizing: border-box;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 3px;
+  color: white;
+  font-size: small;
+  border-style: none;
+}
+/* .searchArea select {
+  height: 40px;
+} */
+.cardstyle {
+  border: 1px none rgb(163, 161, 161);
+  box-shadow: 1px 1px 3px 1px #dad9d9;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+.cardstyle:first-child {
+  margin-top: 20px;
+}
+.cardstyle .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px;
+  color: gray;
+  width: 100%;
+}
+.cardstyle .content h3 {
+  color: #282c34;
+}
+.cardstyle .content p {
+  margin-top: 20px;
+  text-align: left;
+}
+.main {
+  border: 1px solid grey;
+  margin-left: 8px;
+  margin-right: 8px;
+  /* background-color: aqua; */
+}
+.movieSelect,
+.tvSelect {
+  position: relative;
+  font-size: small;
+  width: 150px;
+  color: gray;
+  border: 1px solid rgb(172, 172, 172);
+  height: 40px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin: 10px;
+}
+/* ************************ */
+.tabs {
+  width: 100%;
+  box-sizing: border-box;
+}
+.row {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+/*? ----------- */
+.theHeader {
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.tabs ul {
+  background-color: rgb(235, 235, 235);
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 20px;
+  padding-left: 0px;
+  box-shadow: 1px 1px 3px 1px #dad9d9;
+}
+.tabs ul li {
+  flex: 1;
+  list-style: none;
+  font-size: small;
+  color: #282c34;
+}
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.defaultSearch h1 {
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
